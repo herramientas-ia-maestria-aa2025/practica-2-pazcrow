@@ -3,11 +3,15 @@ import mlflow.sklearn
 import numpy as np
 
 st.title("Predicción de Diabetes")
+st.title("Luis Angel Pazmiño")
 
 # Configurar conexión con MLflow Tracking Server
 pass
+mlflow.set_tracking_uri("http://localhost:9090") # cambiar en función de su servidor
 
 # Cargar modelo desde el Model Registry, revise el ejemplo de flask
+model = mlflow.sklearn.load_model("models:/model_5/1") # cambiar en función de su modelo
+
 pass
 
 # Deslizadores para cada input del modelo
